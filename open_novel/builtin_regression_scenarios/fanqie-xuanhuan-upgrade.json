@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "fanqie-xuanhuan-upgrade",
+  "styleProfileId": "fanqie-xuanhuan-upgrade",
+  "maxChapterCount": 10,
+  "memory": {
+    "memory/facts.json": {
+      "schemaVersion": 1,
+      "facts": [
+        {
+          "id": "fact_lincheng_linggen_baseline",
+          "text": "林澈曾在山门测试中被判为残缺灵根。",
+          "validFrom": "chapter:{start}",
+          "importance": "critical",
+          "confidence": 1
+        },
+        {
+          "id": "fact_ceshi_stone_abnormal",
+          "text": "测试石会对林澈体内的禁忌传承产生异常反应。",
+          "validFrom": "chapter:{start}",
+          "importance": "high",
+          "confidence": 0.9
+        }
+      ]
+    },
+    "memory/open-loops.json": {
+      "schemaVersion": 1,
+      "loops": [
+        {
+          "id": "loop_forbidden_inheritance",
+          "question": "林澈体内禁忌传承为何会引发测试石裂纹？",
+          "openedIn": "chapter:{start}",
+          "status": "open",
+          "payoffExpectation": "5 chapters"
+        }
+      ]
+    },
+    "memory/promises.json": {
+      "schemaVersion": 1,
+      "promises": [
+        {
+          "id": "promise_waste_to_counterattack",
+          "text": "废柴被羞辱后必须用行动反击，但胜利要带代价。",
+          "openedIn": "chapter:{start}",
+          "status": "active",
+          "payoffWindow": "1-3 chapters"
+        }
+      ]
+    }
+  },
+  "contracts": [
+    {
+      "title": "山门测灵",
+      "focus": "林澈在山门测试中承受羞辱，并第一次让测试石出现异常。",
+      "goal": "林澈想保住入门资格，不再被当众踩进尘里。",
+      "conflict": "旧敌周衡当众嘲讽，执事准备按残缺灵根淘汰林澈。",
+      "turn": "测试石在林澈碰触时裂出暗纹，却被长老强行压下。",
+      "outcome": "林澈得到一次补测机会，但异常痕迹被长老封锁。",
+      "hook": "夜里，裂纹玉牌在林澈掌心发烫，指向禁地。",
+      "emotionalBeat": "林澈从强忍屈辱转为警惕，意识到自己并非彻底无路。",
+      "relationshipBeat": "周衡从轻蔑变成不安，开始盯防林澈。",
+      "cost": "林澈保住机会，却暴露了会引来长老追查的异常。"
+    },
+    {
+      "title": "补测赌约",
+      "focus": "林澈用一次带风险的补测反击旧敌，换来继续调查的资格。",
+      "goal": "林澈想赢下补测，拿到进入藏经阁查证异常的令牌。",
+      "conflict": "周衡逼他立下失败自废名额的赌约，执事默许围观羞辱。",
+      "turn": "林澈借测试石暗纹反推灵力流向，险些被反噬。",
+      "outcome": "林澈赢下赌约，但经脉留下灼伤，被长老怀疑作弊。",
+      "hook": "藏经阁令牌背面出现和裂纹玉牌相同的禁纹。",
+      "emotionalBeat": "林澈压住疼痛，没有炫耀，只记住众人前后变脸。",
+      "relationshipBeat": "周衡开始害怕林澈翻身，同时暗中求助兄长。",
+      "cost": "林澈得到资格，却付出经脉灼伤和作弊嫌疑。"
+    },
+    {
+      "title": "藏经禁页",
+      "focus": "林澈在藏经阁找到禁忌传承线索，却被迫做出是否救人的选择。",
+      "goal": "林澈想查明测试石裂纹和自己身世的关系。",
+      "conflict": "藏经阁阵法排斥残缺灵根，周衡兄长设局让他触犯禁制。",
+      "turn": "禁页现身时，一名杂役弟子被阵法卷入，林澈必须分心救人。",
+      "outcome": "林澈救下杂役并记住半句禁页，却失去完整线索。",
+      "hook": "杂役认出林澈母亲旧物，说禁地里有人等过她。",
+      "emotionalBeat": "林澈第一次把翻身机会让给别人的命，爽感里带着遗憾。",
+      "relationshipBeat": "杂役从畏缩转为信任，愿意替林澈传消息。",
+      "cost": "林澈错失完整禁页，还留下进入禁制的证据。"
+    },
+    {
+      "title": "禁地夜行",
+      "focus": "林澈冒险进入禁地，确认母亲旧事和禁忌传承有关。",
+      "goal": "林澈想在长老发现前找到母亲留下的证据。",
+      "conflict": "禁地巡守加强，周衡兄长带人搜捕，杂役消息可能是陷阱。",
+      "turn": "林澈发现所谓陷阱里藏着母亲刻下的保命阵。",
+      "outcome": "林澈拿到半枚阵钥，却被迫暴露身法救下杂役。",
+      "hook": "长老认出身法来源，下令明日公开审问林澈。",
+      "emotionalBeat": "林澈从怀疑杂役到选择相信，关系压力推动他承担风险。",
+      "relationshipBeat": "杂役欠下人情，周衡兄长确认林澈不是普通废物。",
+      "cost": "林澈得到阵钥，却把自己的底牌暴露给敌人。"
+    },
+    {
+      "title": "公开审问",
+      "focus": "林澈在公开审问中反转指控，但引出更高层势力。",
+      "goal": "林澈想洗清作弊嫌疑，保住继续追查母亲旧事的资格。",
+      "conflict": "长老以禁地证据逼供，周衡兄长准备把罪名钉死在林澈身上。",
+      "turn": "林澈用半枚阵钥证明有人先动过禁地阵法，反咬周衡兄长。",
+      "outcome": "林澈暂时脱罪并赢得外门名额，但被内门监察盯上。",
+      "hook": "监察递来母亲旧名册，问林澈是否想知道她为何背叛宗门。",
+      "emotionalBeat": "林澈赢了，却没有轻松，因为胜利把母亲伤口撕得更深。",
+      "relationshipBeat": "围观弟子由嘲笑转为敬畏，周衡彻底结怨。",
+      "cost": "林澈摆脱眼前罪名，却进入更危险的内门视线。"
+    }
+  ],
+  "contractDefaults": {
+    "pov": "林澈",
+    "time": "山门试炼期间",
+    "location": "青岚宗",
+    "internalNeed": "林澈想证明自己不是任人踩踏的废物，也想知道母亲旧事真相。",
+    "woundOrFear": "林澈害怕再次被公开否定，更害怕母亲留下的东西真的会害死身边人。",
+    "stakes": "失败会让林澈失去入门资格、调查机会和最后一点尊严。",
+    "subtext": "林澈嘴上冷静克制，实际每次退让都在计算如何把尊严抢回来。",
+    "aftertaste": "读者应先感到反击爽感，再意识到胜利把更危险的敌人引了出来。",
+    "logicDependencies": [
+      "林澈曾在山门测试中被判为残缺灵根",
+      "测试石会对林澈体内的禁忌传承产生异常反应"
+    ],
+    "mustInclude": ["测试石", "裂纹玉牌", "周衡", "长老压力"],
+    "mustAvoid": ["提前解释完整禁忌传承真相", "无代价碾压", "只用旁白宣布情绪"],
+    "readerPromises": ["废柴逆袭", "测试石异常", "母亲旧事", "胜利带代价"]
+  }
+}

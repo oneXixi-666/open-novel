@@ -1,0 +1,28 @@
+{
+  "id": "writing-formula-extractor",
+  "name": "写法提取器",
+  "category": "learning",
+  "priority": "p2",
+  "description": "从中文网文文本中提取可复用的写法候选。",
+  "inputs": [
+    "sourceText",
+    "sourceLabel"
+  ],
+  "outputs": [
+    "story/formula-candidates/{runId}.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "codex-cli",
+  "allowedAgents": [
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "eachCandidateHasEvidence",
+    "evidenceExistsInSource",
+    "noDuplicateIds"
+  ]
+}

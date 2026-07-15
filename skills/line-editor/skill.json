@@ -1,0 +1,34 @@
+{
+  "id": "line-editor",
+  "name": "文字润色器",
+  "category": "revision",
+  "priority": "p0",
+  "description": "在不改变既定设定的前提下，将现有章节或草稿润色为可审阅版本。",
+  "inputs": [
+    "novel.json",
+    "story/style-profile.json",
+    "style.md",
+    "rules.md",
+    "memory/writing-lessons.json",
+    "sourceText"
+  ],
+  "outputs": [
+    "drafts/{targetName}.polished.md"
+  ],
+  "mode": "markdown",
+  "writePolicy": "draft-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "local-model",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "preservesCanon",
+    "improvesReadability",
+    "keepsVoice"
+  ]
+}

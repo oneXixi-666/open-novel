@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "templateMaintenancePolicy": {
+    "activeProfileRequiredFields": [
+      "templateStatus",
+      "maturity",
+      "promotionCriteria"
+    ],
+    "plannedSlotActivationCriteria": {
+      "requiredSampleChapters": 5,
+      "minimumGateScore": 90,
+      "minimumQualityScore": 90,
+      "requiredReviews": [
+        "continuity",
+        "humanity",
+        "platform-rhythm",
+        "risk-control"
+      ],
+      "requiredArtifacts": [
+        "five-chapter-sequence-evaluation",
+        "editorial-review-report",
+        "style-profile-diff",
+        "promotion-notes"
+      ],
+      "riskControls": [
+        "must not override project canon",
+        "must state platform assumptions without copying platform-proprietary text",
+        "must include genre-specific taboo and pacing risks",
+        "must pass base-vs-template five-chapter comparison before activation"
+      ]
+    }
+  },
+  "profiles": [
+    {
+      "id": "generic-web-serial",
+      "label": "通用网文连载",
+      "templateStatus": "active",
+      "maturity": "baseline",
+      "platform": "generic",
+      "genres": [],
+      "tone": ["表达清晰", "情绪有依据", "适合连载"],
+      "readerExpectations": [
+        "每章至少推进一个明确承诺、冲突、关系变化或问题。",
+        "主角的选择应带来压力、代价或信息变化。",
+        "章尾既要保留剧情牵引，也要留下情绪余味。"
+      ],
+      "plotRhythm": [
+        "从正在发生的场面切入，避免长篇铺垫。",
+        "让原因、阻碍、转折、结果和钩子保持清晰。",
+        "除非说明会改变当前冲突，否则压缩解释性内容。"
+      ],
+      "emotionGuidance": [
+        "通过注意力、措辞、行为、沉默、误读的对白、选择和后果表现情绪，不必每次都写身体反应。",
+        "把外部目标和人物的需要、伤口、恐惧、关系或尊严连接起来。",
+        "即使本章有满足感，也要让回报伴随代价。",
+        "允许有因果依据的犹豫、自欺、修正和不完整表达；情绪可以克制或未解决，但不能消失。"
+      ],
+      "descriptionGuidance": [
+        "描写应制造压力、揭示人物或改变可选行动。",
+        "避免与当前场景无关的静态景物、机制和背景堆叠。",
+        "只写视角人物此刻会注意到的少量关键细节，不机械罗列五感。"
+      ],
+      "taboo": [
+        "不要让平台或题材风格覆盖作品既定事实。",
+        "不要通过忽略明确约束来解决场景。",
+        "不要只用悲伤、愤怒、害怕等标签代替人物特有的证据。",
+        "不要用错别字、事实错误、逻辑缺口、随机结巴、无意义闲聊或随意降智伪造人味。",
+        "不要重复套路化身体反应或固定的动作加情绪解释句式。"
+      ],
+      "editorialFocus": [
+        "人物具体性",
+        "个人动机",
+        "有依据的关系转折",
+        "读者关注点",
+        "带代价的回报",
+        "连载钩子"
+      ],
+      "notes": "内置通用模板。作品可保存自己的调整，后续版本也可以继续补充平台和题材模板。",
+      "promotionCriteria": {
+        "requiredSampleChapters": 5,
+        "minimumGateScore": 90,
+        "minimumQualityScore": 90,
+        "reviewChecklist": [
+          "长篇连续性",
+          "人物具体性",
+          "通过行动表现情绪",
+          "章节追读力"
+        ]
+      }
+    },
+    {
+      "id": "fanqie-xuanhuan-upgrade",
+      "label": "番茄风格玄幻升级",
+      "templateStatus": "active",
+      "maturity": "candidate",
+      "extends": "generic-web-serial",
+      "platform": "fanqie",
+      "genres": ["xuanhuan", "upgrade", "web-serial"],
+      "tone": ["爽点清晰", "压迫感强", "情绪直接但要有动作承托"],
+      "readerExpectations": [
+        "每章至少推进一个可感知爽点、危机、反转、关系变化或升级线索。",
+        "主角的赢要带代价或暴露新风险，避免无成本碾压。",
+        "章尾保留明确钩子，让读者知道下一章要看什么。"
+      ],
+      "plotRhythm": [
+        "开场快速进入测试、冲突、追杀、审判、交易或选择现场。",
+        "用压迫、误判、反击、代价、余波组织段落，不长时间解释体系。",
+        "升级信息要和当章行动绑定，避免单独堆设定。"
+      ],
+      "emotionGuidance": [
+        "废柴、羞辱、亲情、尊严和旧怨要落到具体动作、对白和沉默。",
+        "爽点前先让读者看见主角承受了什么，而不是直接宣布逆袭。",
+        "配角态度转变要有可见证据，不能一句话从轻蔑变敬畏。"
+      ],
+      "descriptionGuidance": [
+        "环境描写服务压迫、等级差、危险感或选择限制。",
+        "功法、灵器、境界描写要短，并立刻影响战局或人物判断。"
+      ],
+      "taboo": [
+        "不要用大段世界观解释替代当前冲突。",
+        "不要让主角胜利没有代价、没有见证者、没有后续风险。",
+        "不要把情绪只写成愤怒、震惊、激动等标签。"
+      ],
+      "editorialFocus": [
+        "爽点兑现",
+        "升级代价",
+        "压迫到反击",
+        "尊严伤口",
+        "章尾追读",
+        "体系信息节制"
+      ],
+      "notes": "用于后续番茄玄幻调优的内置候选模板，只包含通用读者预期经验，不复制平台作品文本。",
+      "promotionCriteria": {
+        "requiredSampleChapters": 5,
+        "minimumGateScore": 90,
+        "minimumQualityScore": 90,
+        "reviewChecklist": [
+          "压迫到反击的节奏",
+          "升级代价",
+          "章尾追读力",
+          "体系说明节制"
+        ]
+      }
+    },
+    {
+      "id": "urban-emotion-suspense",
+      "label": "都市情感悬疑",
+      "templateStatus": "active",
+      "maturity": "candidate",
+      "extends": "generic-web-serial",
+      "platform": "generic",
+      "genres": ["urban", "emotion", "suspense"],
+      "tone": ["克制", "关系张力强", "细节有指向"],
+      "readerExpectations": [
+        "每章要同时推进现实压力、关系误会或线索疑点中的至少一项。",
+        "人物说出口的话和真正想保护/隐藏的东西应有差异。",
+        "悬念必须公平留痕，不能只靠作者隐瞒关键信息。"
+      ],
+      "plotRhythm": [
+        "从可见压力或关系场面切入，少用纯背景说明。",
+        "线索、情绪和现实代价交替推进，避免单线拖沓。",
+        "章尾用新证据、关系错位或选择后果制造追读。"
+      ],
+      "emotionGuidance": [
+        "情感冲突通过选择、回避、试探、误读和代价表现。",
+        "亲密关系变化要有前后因果，不要突兀和解或突兀决裂。",
+        "让人物保留体面、秘密或自欺，避免把内心全部解释干净。"
+      ],
+      "descriptionGuidance": [
+        "城市空间描写要服务身份、压力、阶层差异或线索。",
+        "细节应能回扣人物关系或后续疑点。"
+      ],
+      "taboo": [
+        "不要用旁白直接解释所有误会。",
+        "不要让线索只在揭晓时突然出现。",
+        "不要把情绪冲突写成重复争吵。"
+      ],
+      "editorialFocus": [
+        "关系潜台词",
+        "公平线索",
+        "现实压力",
+        "克制情绪",
+        "选择代价"
+      ],
+      "notes": "用于后续扩充的都市情感悬疑通用候选模板。",
+      "promotionCriteria": {
+        "requiredSampleChapters": 5,
+        "minimumGateScore": 90,
+        "minimumQualityScore": 90,
+        "reviewChecklist": [
+          "公平线索链",
+          "关系潜台词",
+          "现实压力",
+          "克制但不混乱的情绪"
+        ]
+      }
+    },
+    {
+      "id": "female-romance-growth",
+      "label": "女频情感成长",
+      "templateStatus": "active",
+      "maturity": "candidate",
+      "extends": "generic-web-serial",
+      "platform": "generic",
+      "genres": ["romance", "growth", "relationship"],
+      "tone": ["细腻", "有拉扯", "人物成长清晰"],
+      "readerExpectations": [
+        "每章推进关系认知、个人成长、外部阻力或承诺变化。",
+        "情感转折要由互动和选择推动，而不是旁白宣布。",
+        "甜、虐、爽都要和人物自尊、边界或愿望有关。"
+      ],
+      "plotRhythm": [
+        "场景围绕一次关系测试、边界选择或外部压力展开。",
+        "用互动细节制造情绪波动，避免长段心理独白堆叠。",
+        "章尾留下关系新状态或未说出口的问题。"
+      ],
+      "emotionGuidance": [
+        "让人物在喜欢、害怕、骄傲、退让之间做具体选择。",
+        "关系升温要有试探、误解、保护或共同承担。",
+        "成长线要体现边界感和自我判断，而不只是被拯救。"
+      ],
+      "descriptionGuidance": [
+        "外貌和场景描写优先服务情绪距离、身份差异或关系变化。",
+        "细节要能反映人物是否被看见、被误解或被尊重。"
+      ],
+      "taboo": [
+        "不要让情感推进只依赖误会不沟通。",
+        "不要让角色成长被单纯宠爱替代。",
+        "不要用过密描写稀释场景核心情绪。"
+      ],
+      "editorialFocus": [
+        "关系递进",
+        "边界与成长",
+        "情绪细节",
+        "互动因果",
+        "未说出口的张力"
+      ],
+      "notes": "用于后续平台细分的情感成长通用候选模板。",
+      "promotionCriteria": {
+        "requiredSampleChapters": 5,
+        "minimumGateScore": 90,
+        "minimumQualityScore": 90,
+        "reviewChecklist": [
+          "有依据的关系递进",
+          "边界与自主性",
+          "情绪细节",
+          "互动因果"
+        ]
+      }
+    }
+  ],
+  "plannedSlots": [
+    {
+      "id": "fanqie-urban-system",
+      "platform": "fanqie",
+      "genres": ["urban", "system", "comedy"],
+      "label": "番茄都市系统候选"
+    },
+    {
+      "id": "fanqie-female-revenge",
+      "platform": "fanqie",
+      "genres": ["female", "revenge", "growth"],
+      "label": "番茄女频复仇成长候选"
+    },
+    {
+      "id": "qidian-xianxia-longform",
+      "platform": "qidian",
+      "genres": ["xianxia", "cultivation", "longform"],
+      "label": "起点仙侠长篇候选"
+    },
+    {
+      "id": "qidian-sci-fi-tech",
+      "platform": "qidian",
+      "genres": ["sci-fi", "technology", "civilization"],
+      "label": "起点科幻科技候选"
+    },
+    {
+      "id": "jjwxc-romance-slowburn",
+      "platform": "jjwxc",
+      "genres": ["romance", "slowburn", "relationship"],
+      "label": "晋江慢热情感候选"
+    },
+    {
+      "id": "jjwxc-historical-romance",
+      "platform": "jjwxc",
+      "genres": ["historical", "romance", "court"],
+      "label": "晋江古言宫廷候选"
+    },
+    {
+      "id": "tomato-short-drama-revenge",
+      "platform": "fanqie",
+      "genres": ["short-drama", "revenge", "twist"],
+      "label": "短剧复仇反转候选"
+    },
+    {
+      "id": "suspense-crime-investigation",
+      "platform": "generic",
+      "genres": ["suspense", "crime", "investigation"],
+      "label": "悬疑罪案调查候选"
+    },
+    {
+      "id": "historical-power-struggle",
+      "platform": "generic",
+      "genres": ["historical", "power-struggle", "strategy"],
+      "label": "历史权谋候选"
+    },
+    {
+      "id": "light-novel-adventure",
+      "platform": "generic",
+      "genres": ["light-novel", "adventure", "team"],
+      "label": "轻小说冒险候选"
+    },
+    {
+      "id": "horror-folk-mystery",
+      "platform": "generic",
+      "genres": ["horror", "folk", "mystery"],
+      "label": "民俗恐怖悬疑候选"
+    }
+  ],
+  "coverageCatalog": [
+    {
+      "platform": "fanqie",
+      "label": "番茄商业网文",
+      "status": "mixed",
+      "templateIds": ["fanqie-xuanhuan-upgrade"],
+      "plannedTemplateIds": [
+        "fanqie-urban-system",
+        "fanqie-female-revenge",
+        "tomato-short-drama-revenge"
+      ],
+      "genreFamilies": [
+        "xuanhuan upgrade",
+        "urban system",
+        "female revenge/growth",
+        "short-drama twist"
+      ],
+      "maintenanceNotes": "仅使用经过调校和验证的已启用模板；规划中模板用于预留后续平台与题材扩展。"
+    },
+    {
+      "platform": "qidian",
+      "label": "起点长篇类型小说",
+      "status": "planned",
+      "templateIds": [],
+      "plannedTemplateIds": ["qidian-xianxia-longform", "qidian-sci-fi-tech"],
+      "genreFamilies": [
+        "xianxia cultivation",
+        "sci-fi technology",
+        "civilization and power progression",
+        "long-form faction conflict"
+      ],
+      "maintenanceNotes": "用于较慢的长篇推进、势力经营、体系成长和设定承载。"
+    },
+    {
+      "platform": "jjwxc",
+      "label": "晋江关系驱动小说",
+      "status": "planned",
+      "templateIds": [],
+      "plannedTemplateIds": ["jjwxc-romance-slowburn", "jjwxc-historical-romance"],
+      "genreFamilies": [
+        "slow-burn romance",
+        "historical romance",
+        "relationship growth",
+        "court and family pressure"
+      ],
+      "maintenanceNotes": "用于细腻情绪、关系状态变化和较慢兑现节奏。"
+    },
+    {
+      "platform": "generic",
+      "label": "跨平台题材储备",
+      "status": "mixed",
+      "templateIds": [
+        "generic-web-serial",
+        "urban-emotion-suspense",
+        "female-romance-growth"
+      ],
+      "plannedTemplateIds": [
+        "suspense-crime-investigation",
+        "historical-power-struggle",
+        "light-novel-adventure",
+        "horror-folk-mystery",
+        "workplace-business-growth"
+      ],
+      "genreFamilies": [
+        "urban emotion suspense",
+        "romance growth",
+        "crime investigation",
+        "historical power struggle",
+        "light novel adventure",
+        "folk horror",
+        "workplace/business growth"
+      ],
+      "maintenanceNotes": "为尚未锁定平台的作品提供通用覆盖，作者可随时通过项目写法配置进行调整。"
+    },
+    {
+      "platform": "extension",
+      "label": "用户维护的平台或题材模板",
+      "status": "extension-point",
+      "templateIds": [],
+      "plannedTemplateIds": [],
+      "genreFamilies": [
+        "custom platform",
+        "custom genre",
+        "house style",
+        "author-specific constraints"
+      ],
+      "maintenanceNotes": "当前支持作者通过项目写法配置扩展；经过验证的项目写法后续可以沉淀为内置模板。"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+[
+  {
+    "platform": "douyin",
+    "label": "抖音短篇与微短剧预留模板",
+    "status": "planned",
+    "templateIds": [],
+    "plannedTemplateIds": ["douyin-micro-drama-reversal"],
+    "genreFamilies": ["micro-drama reversal", "revenge", "high-frequency hooks"],
+    "maintenanceNotes": "用于短篇章节节奏和高密度反转；五章评估确认可读性与情绪清晰度后再启用。"
+  },
+  {
+    "platform": "broad-reserve",
+    "label": "内置题材预留总览",
+    "status": "extension-point",
+    "templateIds": [],
+    "plannedTemplateIds": [
+      "fanqie-urban-combat-business",
+      "fanqie-male-fantasy-power-strategy",
+      "fanqie-female-family-rebirth",
+      "qidian-fantasy-kingdom-war",
+      "qidian-infinite-flow-survival",
+      "jjwxc-modern-romance-career",
+      "jjwxc-danmei-case-unit",
+      "generic-military-techno-thriller",
+      "generic-sports-competition-growth",
+      "generic-food-healing-slice-of-life",
+      "generic-children-adventure-mystery"
+    ],
+    "genreFamilies": [
+      "urban combat/business",
+      "male fantasy power strategy",
+      "female family rebirth",
+      "kingdom war",
+      "infinite flow survival",
+      "modern romance career",
+      "relationship-led case unit",
+      "military techno-thriller",
+      "sports competition",
+      "food healing",
+      "children adventure mystery"
+    ],
+    "maintenanceNotes": "这是扩展更多平台和题材的内置入口；规划中模板通过评估后可以直接升级为启用模板。"
+  }
+]

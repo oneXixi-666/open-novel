@@ -1,0 +1,46 @@
+{
+  "id": "generation-scene-contract-builder",
+  "name": "自动场景合同生成器",
+  "category": "planning",
+  "priority": "p0",
+  "description": "为自动生成流程创建经过校验的场景合同候选。",
+  "inputs": [
+    "novel.json",
+    "story/workbench-architecture.json",
+    "story/chapter-blueprint.json",
+    "story/style-profile.json",
+    "bible.md",
+    "outline.md",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/character-states.json",
+    "memory/relationship-states.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json",
+    "chapterIntent",
+    "activeProhibitions"
+  ],
+  "outputs": [
+    "story/generation-candidates/{chapterId}.scene-contract.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "local-model",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "hasGoal",
+    "hasConflict",
+    "hasTurn",
+    "hasOutcome",
+    "hasHook",
+    "hasHumanCore"
+  ]
+}

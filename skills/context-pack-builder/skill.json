@@ -1,0 +1,42 @@
+{
+  "id": "context-pack-builder",
+  "name": "上下文包生成器",
+  "category": "context",
+  "priority": "p0",
+  "description": "选择并说明单次模型运行所需的最小上下文。",
+  "inputs": [
+    "novel.json",
+    "story/style-profile.json",
+    "bible.md",
+    "style.md",
+    "rules.md",
+    "outline.md",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/character-states.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json",
+    "memory/chapter-summaries.json",
+    "story/chapter-briefs/{chapterId}.json",
+    "chapters/{previousChapterId}.md"
+  ],
+  "outputs": [
+    "story/context-packs/{chapterId}.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "explainsIncludedFiles",
+    "explainsExcludedFiles",
+    "respectsBudget"
+  ]
+}

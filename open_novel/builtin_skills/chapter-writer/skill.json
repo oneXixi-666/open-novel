@@ -1,0 +1,48 @@
+{
+  "id": "chapter-writer",
+  "name": "章节写作器",
+  "category": "drafting",
+  "priority": "p0",
+  "description": "根据选定的上下文包和场景合同生成章节草稿。",
+  "inputs": [
+    "novel.json",
+    "story/style-profile.json",
+    "bible.md",
+    "style.md",
+    "rules.md",
+    "outline.md",
+    "story/chapter-briefs/{chapterId}.json",
+    "story/revision-briefs/{chapterId}.json",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/character-states.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json",
+    "memory/long-term-memory.json",
+    "memory/writing-lessons.json",
+    "story/context-packs/{chapterId}.json",
+    "activeProhibitions"
+  ],
+  "outputs": [
+    "drafts/{chapterId}.generated.md"
+  ],
+  "mode": "markdown",
+  "writePolicy": "draft-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "local-model",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "keepsCanon",
+    "usesSceneGoal",
+    "hasConflict",
+    "hasTurn",
+    "hasHook"
+  ]
+}

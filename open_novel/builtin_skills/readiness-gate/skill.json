@@ -1,0 +1,36 @@
+{
+  "id": "readiness-gate",
+  "name": "起草准备检查器",
+  "category": "plot-cockpit",
+  "priority": "p0",
+  "description": "检查场景合同是否已经具备起草条件。",
+  "inputs": [
+    "story/chapter-briefs/{chapterId}.json",
+    "story/context-packs/{chapterId}.json",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json"
+  ],
+  "outputs": [
+    "runs/{runId}/readiness-report.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "hasGoal",
+    "hasConflict",
+    "hasOutcome",
+    "canonSafe",
+    "contextSufficient"
+  ]
+}

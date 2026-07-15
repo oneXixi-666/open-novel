@@ -1,0 +1,37 @@
+{
+  "id": "chapter-blueprint-builder",
+  "name": "章节蓝图生成器",
+  "category": "planning",
+  "priority": "p0",
+  "description": "根据已确认的作品方向生成结构化多章蓝图。",
+  "inputs": [
+    "novel.json",
+    "story/workbench-architecture.json",
+    "story/style-profile.json",
+    "bible.md",
+    "outline.md",
+    "memory/facts.json",
+    "memory/character-states.json",
+    "memory/promises.json"
+  ],
+  "outputs": [
+    "story/generation-candidates/chapter-blueprint.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "local-model",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "exactChapterCount",
+    "distinctGoals",
+    "causalProgression",
+    "promiseProgression"
+  ]
+}

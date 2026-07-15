@@ -1,0 +1,32 @@
+{
+  "id": "chapter-blueprint-repairer",
+  "name": "章节蓝图修复器",
+  "category": "planning",
+  "priority": "p0",
+  "description": "在不降低结构校验标准的前提下修复未通过的章节蓝图。",
+  "inputs": [
+    "novel.json",
+    "story/workbench-architecture.json",
+    "story/style-profile.json"
+  ],
+  "outputs": [
+    "story/generation-candidates/chapter-blueprint.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "local-model",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "exactChapterCount",
+    "distinctGoals",
+    "causalProgression",
+    "promiseProgression"
+  ]
+}

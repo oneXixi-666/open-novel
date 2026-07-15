@@ -1,0 +1,35 @@
+{
+  "id": "book-architecture-builder",
+  "name": "作品架构生成器",
+  "category": "planning",
+  "priority": "p0",
+  "description": "将已确认的作品方向扩展为可执行的长篇架构。",
+  "inputs": [
+    "novel.json",
+    "story/style-profile.json",
+    "notes/ideas.md",
+    "bible.md",
+    "rules.md",
+    "selectedDirection"
+  ],
+  "outputs": [
+    "story/generation-candidates/book-architecture.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "local-model",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "confirmedDirectionPreserved",
+    "serialEngine",
+    "escalationPath",
+    "longTermHooks"
+  ]
+}

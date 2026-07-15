@@ -1,0 +1,74 @@
+[
+  {
+    "id": "fanqie-urban-combat-business",
+    "platform": "fanqie",
+    "genres": ["urban", "combat", "business", "power-progression"],
+    "label": "番茄都市战斗商战预留模板"
+  },
+  {
+    "id": "fanqie-male-fantasy-power-strategy",
+    "platform": "fanqie",
+    "genres": ["male", "fantasy", "power-strategy", "upgrade"],
+    "label": "番茄男频玄幻权谋升级预留模板"
+  },
+  {
+    "id": "fanqie-female-family-rebirth",
+    "platform": "fanqie",
+    "genres": ["female", "family", "rebirth", "revenge"],
+    "label": "番茄女频家庭重生预留模板"
+  },
+  {
+    "id": "douyin-micro-drama-reversal",
+    "platform": "douyin",
+    "genres": ["micro-drama", "reversal", "revenge", "high-hook"],
+    "label": "抖音微短剧高反转预留模板"
+  },
+  {
+    "id": "qidian-fantasy-kingdom-war",
+    "platform": "qidian",
+    "genres": ["fantasy", "kingdom-war", "faction", "longform"],
+    "label": "起点奇幻王国战争预留模板"
+  },
+  {
+    "id": "qidian-infinite-flow-survival",
+    "platform": "qidian",
+    "genres": ["infinite-flow", "survival", "team", "mystery"],
+    "label": "起点无限流生存预留模板"
+  },
+  {
+    "id": "jjwxc-modern-romance-career",
+    "platform": "jjwxc",
+    "genres": ["modern-romance", "career", "relationship", "growth"],
+    "label": "晋江现代情感职场预留模板"
+  },
+  {
+    "id": "jjwxc-danmei-case-unit",
+    "platform": "jjwxc",
+    "genres": ["danmei", "case-unit", "relationship", "suspense"],
+    "label": "晋江关系向单元悬疑预留模板"
+  },
+  {
+    "id": "generic-military-techno-thriller",
+    "platform": "generic",
+    "genres": ["military", "techno-thriller", "mission", "strategy"],
+    "label": "军事科技惊悚预留模板"
+  },
+  {
+    "id": "generic-sports-competition-growth",
+    "platform": "generic",
+    "genres": ["sports", "competition", "team", "growth"],
+    "label": "体育竞技成长预留模板"
+  },
+  {
+    "id": "generic-food-healing-slice-of-life",
+    "platform": "generic",
+    "genres": ["food", "healing", "slice-of-life", "community"],
+    "label": "美食治愈日常预留模板"
+  },
+  {
+    "id": "generic-children-adventure-mystery",
+    "platform": "generic",
+    "genres": ["children", "adventure", "mystery", "friendship"],
+    "label": "儿童冒险解谜预留模板"
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "id": "canon-patch-proposer",
+  "name": "长期记忆更新建议器",
+  "category": "memory",
+  "priority": "p0",
+  "description": "将章节复盘转换为可编辑的长期记忆更新。",
+  "inputs": [
+    "chapters/{chapterId}.md",
+    "runs/{runId}/post-chapter-review.json",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/character-states.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json",
+    "memory/active-prohibitions.json"
+  ],
+  "outputs": [
+    "patches/{runId}.canon-patch.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "eachPatchHasSource",
+    "eachPatchHasAction",
+    "noAutoCanonWrite"
+  ]
+}

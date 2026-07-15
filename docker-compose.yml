@@ -1,0 +1,25 @@
+services:
+  open-novel:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      OPEN_NOVEL_HOST: 0.0.0.0
+      OPEN_NOVEL_PORT: "8000"
+      OPEN_NOVEL_STATIC_DIR: /app/frontend-dist
+      OPEN_NOVEL_DEPLOYMENT_MODE: compose
+      OPEN_NOVEL_HEALTH_URL: http://127.0.0.1:8000/health
+      # 改为局域网或公网监听前必须通过宿主机环境变量设置非空令牌。
+      OPEN_NOVEL_ACCESS_TOKEN: ${OPEN_NOVEL_ACCESS_TOKEN:-}
+    volumes:
+      - ./.open-novel:/app/.open-novel
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health', timeout=2)"
+      interval: 10s
+      timeout: 3s
+      retries: 6
+      start_period: 10s

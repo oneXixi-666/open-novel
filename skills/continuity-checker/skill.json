@@ -1,0 +1,36 @@
+{
+  "id": "continuity-checker",
+  "name": "连续性检查器",
+  "category": "review",
+  "priority": "p0",
+  "description": "检查草稿中的矛盾、因果薄弱和缺少依据的信息揭示。",
+  "inputs": [
+    "drafts/{chapterId}.generated.md",
+    "chapters/{previousChapterId}.md",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/character-states.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json",
+    "timeline.md"
+  ],
+  "outputs": [
+    "runs/{runId}/continuity-report.json"
+  ],
+  "mode": "json",
+  "writePolicy": "read-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "evidenceRequired",
+    "severityRequired",
+    "suggestionRequired"
+  ]
+}

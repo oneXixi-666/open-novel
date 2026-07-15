@@ -1,0 +1,49 @@
+{
+  "id": "builtin-broad-genre-reserve",
+  "label": "内置综合题材预留包",
+  "status": "reserved",
+  "scope": "platform-and-genre",
+  "activeProfileIds": [],
+  "plannedProfileIds": [
+    "fanqie-urban-system",
+    "fanqie-female-revenge",
+    "fanqie-urban-combat-business",
+    "fanqie-male-fantasy-power-strategy",
+    "fanqie-female-family-rebirth",
+    "tomato-short-drama-revenge",
+    "douyin-micro-drama-reversal",
+    "qidian-xianxia-longform",
+    "qidian-sci-fi-tech",
+    "qidian-fantasy-kingdom-war",
+    "qidian-infinite-flow-survival",
+    "jjwxc-romance-slowburn",
+    "jjwxc-historical-romance",
+    "jjwxc-modern-romance-career",
+    "jjwxc-danmei-case-unit",
+    "suspense-crime-investigation",
+    "historical-power-struggle",
+    "light-novel-adventure",
+    "horror-folk-mystery",
+    "workplace-business-growth",
+    "generic-military-techno-thriller",
+    "generic-sports-competition-growth",
+    "generic-food-healing-slice-of-life",
+    "generic-children-adventure-mystery"
+  ],
+  "coveragePlatforms": [
+    "fanqie",
+    "douyin",
+    "qidian",
+    "jjwxc",
+    "generic",
+    "broad-reserve",
+    "extension"
+  ],
+  "maintenancePolicy": {
+    "activation": "planned-slot-to-candidate-to-active",
+    "minimumSampleChapters": 5,
+    "requiresHumanReview": true,
+    "allowDirectUserOverride": "story/style-profile.json"
+  },
+  "maintenanceNotes": "这是未来扩展大型平台与题材模板包的内置入口；候选写法通过五章评估和人工复核前保持规划状态。"
+}

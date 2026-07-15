@@ -1,0 +1,35 @@
+{
+  "id": "summary-updater",
+  "name": "摘要更新器",
+  "category": "memory",
+  "priority": "p0",
+  "description": "章节接收后生成简洁的章节摘要和项目记忆摘要。",
+  "inputs": [
+    "chapters/{chapterId}.md",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/character-states.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json"
+  ],
+  "outputs": [
+    "memory/chapter-summaries.json",
+    "patches/{runId}.summary-patch.json"
+  ],
+  "mode": "json+markdown",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "summaryIsConcise",
+    "tracksStateChanges",
+    "tracksOpenLoops"
+  ]
+}

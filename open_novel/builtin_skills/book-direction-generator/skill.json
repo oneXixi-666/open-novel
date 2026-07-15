@@ -1,0 +1,34 @@
+{
+  "id": "book-direction-generator",
+  "name": "作品方向生成器",
+  "category": "planning",
+  "priority": "p0",
+  "description": "生成多份可审阅的长篇作品方向候选。",
+  "inputs": [
+    "novel.json",
+    "story/style-profile.json",
+    "notes/ideas.md",
+    "bible.md",
+    "rules.md"
+  ],
+  "outputs": [
+    "story/generation-candidates/book-directions.json"
+  ],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "local-model",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "multipleDirections",
+    "distinctCoreConflict",
+    "longFormHook",
+    "explicitRisks"
+  ]
+}

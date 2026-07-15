@@ -1,0 +1,23 @@
+{
+  "id": "long-form-replanner",
+  "name": "长篇重规划器",
+  "category": "planning",
+  "priority": "p1",
+  "description": "发生明显偏离后，仅针对未来内容生成长篇重规划候选。",
+  "inputs": [
+    "novel.json",
+    "story/workbench-architecture.json",
+    "story/long-form-plan.json",
+    "story/chapter-blueprint.json",
+    "memory/facts.json",
+    "memory/chapter-summaries.json",
+    "deviationReport"
+  ],
+  "outputs": ["story/generation-candidates/long-form-replan.json"],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": ["local-dry-run", "local-model", "codex-cli", "claude-cli", "qwen-cli"],
+  "requiresReview": true,
+  "qualityGates": ["preserveFinalizedChapters", "futureOnly", "beatSegments", "causalRevision"]
+}

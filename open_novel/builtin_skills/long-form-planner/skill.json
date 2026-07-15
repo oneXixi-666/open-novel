@@ -1,0 +1,21 @@
+{
+  "id": "long-form-planner",
+  "name": "长篇规划器",
+  "category": "planning",
+  "priority": "p1",
+  "description": "生成全书、分卷和节拍段落规划候选。",
+  "inputs": [
+    "novel.json",
+    "story/workbench-architecture.json",
+    "story/style-profile.json",
+    "bible.md",
+    "rules.md"
+  ],
+  "outputs": ["story/generation-candidates/long-form-plan.json"],
+  "mode": "json",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": ["local-dry-run", "local-model", "codex-cli", "claude-cli", "qwen-cli"],
+  "requiresReview": true,
+  "qualityGates": ["wholeBookMainline", "multipleVolumes", "beatSegments", "endingDirection"]
+}

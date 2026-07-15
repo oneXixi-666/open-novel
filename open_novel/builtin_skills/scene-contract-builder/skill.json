@@ -1,0 +1,41 @@
+{
+  "id": "scene-contract-builder",
+  "name": "场景合同生成器",
+  "category": "plot-cockpit",
+  "priority": "p0",
+  "description": "在章节起草前建立可执行的场景合同。",
+  "inputs": [
+    "novel.json",
+    "story/style-profile.json",
+    "bible.md",
+    "outline.md",
+    "memory/facts.json",
+    "memory/open-loops.json",
+    "memory/character-states.json",
+    "memory/timeline-events.json",
+    "memory/promises.json",
+    "memory/emotional-arcs.json",
+    "chapterIntent"
+  ],
+  "outputs": [
+    "story/chapter-briefs/{chapterId}.json",
+    "story/scene-cards.json"
+  ],
+  "mode": "json+markdown",
+  "writePolicy": "proposal-only",
+  "defaultAgent": "local-dry-run",
+  "allowedAgents": [
+    "local-dry-run",
+    "codex-cli",
+    "claude-cli",
+    "qwen-cli"
+  ],
+  "requiresReview": true,
+  "qualityGates": [
+    "hasGoal",
+    "hasConflict",
+    "hasTurn",
+    "hasOutcome",
+    "hasHook"
+  ]
+}
